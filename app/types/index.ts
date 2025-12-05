@@ -1,5 +1,5 @@
 export interface Pokemon {
-    name: string;
+    nombre: string;
     url: string;
 }
 
@@ -9,3 +9,17 @@ export interface PokemonResult {
     previous: string;
     result: Pokemon[];
 }
+
+//commit
+// export interface PokemonDetails {
+//     id: number;
+//     nombre: string;
+//     peso: number;
+//     sprites : {
+//         front: string;
+//     };
+//     types : {
+//         slot: number;
+//         type: Pokemon;
+//     }[];
+// }
