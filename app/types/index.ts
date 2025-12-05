@@ -1,5 +1,5 @@
 export interface Pokemon {
-    nombre: string;
+    name: string;
     url: string;
 }
 
@@ -7,7 +7,7 @@ export interface PokemonResult {
     count: number;
     next: string;
     previous: string;
-    result: Pokemon[];
+    results: Pokemon[];
 }
 
 //commit
