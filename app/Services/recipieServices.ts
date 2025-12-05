@@ -1,4 +1,4 @@
-import {PokemonResult} from "@/app/types";
+import {PokemonResultSchema, type PokemonResult} from "@/app/schemas/pokemonSchemas";
 
 export async function getPokemons(): Promise<PokemonResult> {
     const res = await fetch(
@@ -6,9 +6,12 @@ export async function getPokemons(): Promise<PokemonResult> {
         {cache: "no-store"}
     )
         if(!res.ok) {
-            throw new Error('Error occured');
+            throw new Error('Error al hacer la peticion');
         }
 
-        return res.json();
+        const data = await res.json();
+        const validateData = PokemonResultSchema.parse(data);
+
+        return validateData;
 }
 
