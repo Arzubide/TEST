@@ -45,15 +45,24 @@ export default function PokemonDetailPage({ params }: Props) {
     return (
         <>
             <Header/>
-            <div className=" pt-7 pb-10 flex justify-center">
+            <div className="flex flex-col items-center pt-7 pb-10 px-4">
+                <PokemonDetailCard pokemon={pokemon}/>
                 <Link
                     href="/pokemon"
-                    className="rounded-2xl bg-blue-600 hover:bg-blue-700"
+                    className="
+                        mt-8
+                        bg-blue-50 text-blue-600 font-semibold
+                        px-6 py-2 rounded-lg
+                        border border-blue-100
+                        hover:bg-blue-600 hover:text-white
+                        transition-colors duration-200
+                        text-center
+
+                    "
                 >
                     Return to list
                 </Link>
             </div>
-            <PokemonDetailCard pokemon={pokemon}/>
 
         </>
     );
