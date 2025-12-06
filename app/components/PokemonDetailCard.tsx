@@ -11,8 +11,14 @@ interface PokemonDetailCardProps {
 
 export default function PokemonDetailCard({ pokemon }: PokemonDetailCardProps) {
     const {favorites,handleClickFavorite} = usePokemonState()
-
     const isFavorite = favorites.some(fav => fav.name === pokemon.name)
+
+    const [mounted, setMounted] = useState(false)
+    useEffect(()=>{
+        setMounted(true)
+    }, [setMounted])
+    if (!mounted) return null;
+
 
         return (
         <>
