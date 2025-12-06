@@ -56,7 +56,7 @@ export default async function PokemonPage({ searchParams }: Props) {
                         href={`/pokemon?offset=${prevOffset}`}
                         className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 font-medium transition-colors"
                     >
-                        Anterior
+                        Previous
                     </Link>
                 )}
 
@@ -65,7 +65,7 @@ export default async function PokemonPage({ searchParams }: Props) {
                         href={`/pokemon?offset=${nextOffset}`}
                         className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 font-medium transition-transform transform hover:scale-105"
                     >
-                        Siguiente
+                        Next
                     </Link>
                 )}
             </div>
