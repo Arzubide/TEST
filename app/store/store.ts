@@ -12,6 +12,7 @@ export const usePokemonState = create<PokemonState>()(
         (set, get) => ({
             favorites : [],
 
+            //Function AddtoFavorites and RemoveFavorites
             handleClickFavorite : (pokemon) => {
                 if (get().favorites.some(p => p.name === pokemon.name)) {
                     set({
