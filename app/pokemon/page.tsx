@@ -32,7 +32,7 @@ export default async function PokemonPage() {
                                             transition-colors duration-200
                                 "
                             >
-                                Ver detalles
+                                See details
                             </Link>
                         </div>
                     </div>
