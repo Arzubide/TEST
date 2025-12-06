@@ -1,9 +1,7 @@
 "use client"; //
-import Link from "next/link";
 import {PokemonDetail} from "@/app/schemas/pokemonSchemas";
 import {useState,useEffect} from "react";
 import {usePokemonState} from "@/app/store/store";
-import Header from "@/app/components/Header";
 
 
 interface PokemonDetailCardProps {
