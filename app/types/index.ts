@@ -1,14 +1,15 @@
-export interface Pokemon {
-    name: string;
-    url: string;
-}
+import {z} from "zod";
+import {PokemonSchema} from "@/app/schemas/pokemonSchemas";
 
-export interface PokemonResult {
-    count: number;
-    next: string;
-    previous: string;
-    results: Pokemon[];
-}
+
+// export interface PokemonResult {
+//     count: number;
+//     next: string;
+//     previous: string;
+//     results: Pokemon[];
+// }
+//
+// export type Pokemon = z.infer<typeof PokemonSchema>;
 
 //commit
 // export interface PokemonDetails {
