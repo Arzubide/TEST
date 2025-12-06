@@ -1,4 +1,4 @@
-import {PokemonResultSchema, type PokemonResult} from "@/app/schemas/pokemonSchemas";
+import {PokemonResultSchema, type PokemonResult, PokemonDetailSchema, PokemonDetail} from "@/app/schemas/pokemonSchemas";
 
 export async function getPokemons(): Promise<PokemonResult> {
     const res = await fetch(
@@ -15,3 +15,13 @@ export async function getPokemons(): Promise<PokemonResult> {
         return validateData;
 }
 
+
+export async function getPokemonDetails(name : string): Promise<PokemonDetail> {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    if(!res.ok) {
+        throw new Error('Error al hacer la peticion de los detalles del pokemon');
+    }
+    const data = await res.json();
+    const validatePkemonDetails = PokemonDetailSchema.parse(data);
+    return validatePkemonDetails;
+}
