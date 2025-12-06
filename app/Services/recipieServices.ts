@@ -1,8 +1,9 @@
 import {PokemonResultSchema, type PokemonResult, PokemonDetailSchema, PokemonDetail} from "@/app/schemas/pokemonSchemas";
 
-export async function getPokemons(): Promise<PokemonResult> {
+export async function getPokemons(offset: number = 0): Promise<PokemonResult> {
+
     const res = await fetch(
-        "https://pokeapi.co/api/v2/pokemon?limit=20",
+        `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`,
         {cache: "no-store"}
     )
         if(!res.ok) {
