@@ -12,7 +12,6 @@ export const PokemonResultSchema = z.object({
     results: z.array(PokemonSchema),
 });
 
-export type PokemonResult = z.infer<typeof PokemonResultSchema>;
 
 const PokemonTypeSchema = z.object({
     slot : z.number(),
@@ -33,5 +32,7 @@ export const PokemonDetailSchema = z.object({
     sprites: PokemonSpriteSchema,
     types: z.array(PokemonTypeSchema),
 })
+
+export type PokemonResult = z.infer<typeof PokemonResultSchema>;
 
 export type PokemonDetail = z.infer<typeof PokemonDetailSchema>;
