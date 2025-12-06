@@ -53,10 +53,17 @@ export default function PokemonDetailCard({ pokemon }: PokemonDetailCardProps) {
 
                     <button
                         onClick={() => handleClickFavorite(pokemon)}
-                        className={`rounded-2xl hover: cursor-pointer ${
+                        className={`className="
+                                            w-full text-center
+                                            bg-blue-50 text-blue-600 font-semibold
+                                            px-2 py-2 rounded-lg
+                                            border border-blue-100
+                                            hover:bg-blue-600 hover:text-white
+                                            transition-colors duration-200
+                                " ${
                             isFavorite
                                 ? "bg-gray-300  scale-110" 
-                                : "bg-yellow-300 text-gray-400" 
+                                : "bg-yellow-300 text-gray-400 scale-110" 
                         }`}
                     >
                         {isFavorite ? "Remove Favorite" : "Add to Favorite"}

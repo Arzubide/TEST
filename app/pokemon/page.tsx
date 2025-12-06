@@ -48,23 +48,21 @@ export default async function PokemonPage({ searchParams }: Props) {
                 )
             })}
             <div className="flex justify-center gap-4">
-                {/* Botón Anterior: Solo se muestra si la API dice que hay 'previous' */}
                 {data.previous && (
                     <Link
                         href={`/pokemon?offset=${prevOffset}`}
                         className="flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-full shadow-sm hover:bg-gray-100 font-medium transition-colors"
                     >
-                        ← Anterior
+                        Anterior
                     </Link>
                 )}
 
-                {/* Botón Siguiente: Solo se muestra si la API dice que hay 'next' */}
                 {data.next && (
                     <Link
                         href={`/pokemon?offset=${nextOffset}`}
                         className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 font-medium transition-transform transform hover:scale-105"
                     >
-                        Siguiente →
+                        Siguiente
                     </Link>
                 )}
             </div>
