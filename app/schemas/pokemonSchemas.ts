@@ -13,3 +13,25 @@ export const PokemonResultSchema = z.object({
 });
 
 export type PokemonResult = z.infer<typeof PokemonResultSchema>;
+
+const PokemonTypeSchema = z.object({
+    slot : z.number(),
+    type: z.object({
+        name: z.string(),
+        url: z.string().url(),
+    }),
+})
+
+const PokemonSpriteSchema = z.object({
+    front_default: z.string().nullable(),
+})
+
+export const PokemonDetailSchema = z.object({
+    id: z.number(),
+    name: z.string(),
+    weight: z.number(),
+    sprites: PokemonSpriteSchema,
+    types: z.array(PokemonTypeSchema),
+})
+
+export type PokemonDetail = z.infer<typeof PokemonDetailSchema>;
