@@ -3,6 +3,7 @@ import Link from "next/link";
 import {PokemonDetail} from "@/app/schemas/pokemonSchemas";
 import {useState,useEffect} from "react";
 import {usePokemonState} from "@/app/store/store";
+import Header from "@/app/components/Header";
 
 
 interface PokemonDetailCardProps {
@@ -22,6 +23,7 @@ export default function PokemonDetailCard({ pokemon }: PokemonDetailCardProps) {
 
         return (
         <>
+            <Header/>
             <div className="flex flex-col items-center justify-center min-h-screen p-8">
                 <div className="bg-white shadow-xl rounded-lg p-8 max-w-sm w-full text-center border">
 
