@@ -23,8 +23,7 @@ export default function PokemonDetailCard({ pokemon }: PokemonDetailCardProps) {
 
         return (
         <>
-            <Header/>
-            <div className="flex flex-col items-center justify-center min-h-screen p-8">
+            <div className="flex flex-col items-center justify-center pt-20">
                 <div className="bg-white shadow-xl rounded-lg p-8 max-w-sm w-full text-center border">
 
                     <h1 className="text-3xl font-bold capitalize mb-4">{pokemon.name}</h1>
@@ -62,12 +61,7 @@ export default function PokemonDetailCard({ pokemon }: PokemonDetailCardProps) {
                     >
                         {isFavorite ? "Remove Favorite" : "Add to Favorite"}
                     </button>
-                    <Link
-                        href="/pokemon"
-                        className="text-blue-500 hover:underline text-sm"
-                    >
-                        ← Volver al listado
-                    </Link>
+
                 </div>
             </div>
         </>
